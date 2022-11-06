@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>success</title>
+        <link rel = "stylesheet" type = "text/css" href = "{{ url_for('static',filename='/css/style.css') }}" /> 
+        
+    </head>
+    <body>
+        <div class="head">
+            <h1>歡迎光臨，這是會員頁</h1>
+        </div>
+        <br/>
+        <div id="form">
+            <h3>{{ name }}，歡迎登入系統</h3>
+            <a href = "/signout">登出系統</a>
+        </div>
+    
+        <br/>
+
+        <div id="form">
+            <h3>查詢會員姓名</h3>
+            <div class="search">
+                <input id="username" class="username" type="text">
+                <button onclick="submit_entry()">查詢</button>
+            </div>
+        </div>
+    
+        <br/>
+        
+        <div id="list"></div>
+        <div id="form">
+            <h3>更新我的名字</h3>
+            <div class=""search">
+                <input id="updatename" class="username" type="text">
+                <button onclick="update_entry()">更新</button>
+            </div>
+        </div>
+        <div id="list2"></div>
+        <script src="{{ url_for('static', filename= '/js/week7.js') }}></script>
+
+    </body>
+</html>
