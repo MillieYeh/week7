@@ -16,7 +16,7 @@ def db_connection():
         port = 3306,
         user = "root",
         database = "db_1105",
-        password = "cycycy1018",
+        password = "",
         charset = "utf8"
         )
     except mysql.connector.Error as e:
