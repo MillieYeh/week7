@@ -126,14 +126,14 @@ def api_member():
     
     if request.method == 'PATCH':
         if "username" in session:
-            new_name = request.get_jsion(request.data)
+            new_name = request.get_json(request.data)
             username = session["username"]
             sql = """
                 UPDATE member SET name = %s WHERE username = %s
             """
             val = (new_name["name"], username, )
             mydb = db_connection()
-            mycursor = mydb.corsor()
+            mycursor = mydb.cursor()
             mycursor.execute(sql, val)
             mydb.commit()
             return {"ok": "true"}
