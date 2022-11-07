@@ -136,9 +136,9 @@ def api_member():
             mycursor = mydb.cursor()
             mycursor.execute(sql, val)
             mydb.commit()
-            return {"ok": "true"}
+            return {"ok": true }
         else:
-            return {"error": "true"}
+            return {"error": true }
 
 
 if __name__ == "__main__":
